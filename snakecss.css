@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #57fca1; 
+}
+
+.overlay{
+  background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.restartGame{
+  z-index: 1;
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  display: none;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #212529;
+  background: #212529;
+
+}
+
+.restartGame:hover {
+  background: inherit;
+  color: #212529
+}
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  background: inherit;
+  border: #171B26 10px solid;
+  /* box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2); */
+}
+.game-details {
+  color: #171B26;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #171B26 10px solid ;
+}
+.play-board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: inherit;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.play-board .food {
+  background: #171B26;
+}
+.play-board .head {
+  background: #171B26;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1.5rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
+
